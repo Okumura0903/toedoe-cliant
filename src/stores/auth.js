@@ -33,6 +33,7 @@ export const userAuthStore=defineStore("authStore",()=>{
     }
 
     const handleRegister=async(newUser)=>{
+        await csrfCookie()
         try{
             await register(newUser)
             await handleLogin({
