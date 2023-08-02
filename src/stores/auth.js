@@ -12,6 +12,7 @@ export const userAuthStore=defineStore("authStore",()=>{
         try{
             const {data}=await getUser()
             user.value=data
+            console.log('user.value='+user.value)
         }
         catch(error){
             user.value=null
