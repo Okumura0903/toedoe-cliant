@@ -15,6 +15,7 @@ export const userAuthStore=defineStore("authStore",()=>{
         }
         catch(error){
             user.value=null
+            console.log('error')
         }
     }
 
