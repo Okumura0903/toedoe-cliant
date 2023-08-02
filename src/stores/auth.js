@@ -19,10 +19,15 @@ export const userAuthStore=defineStore("authStore",()=>{
     }
 
     const handleLogin=async(credentials)=>{
+        console.log('h1')
         await csrfCookie()
         try{
+            console.log('h2')
             await login(credentials)
+            console.log('h3')
             await fetchUser()
+            console.log('h4')
+
             errors.value={}
         }
         catch(error){
