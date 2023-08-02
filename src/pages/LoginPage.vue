@@ -48,7 +48,7 @@ const handleSubmit=async ()=>{
         console.log('before.push')
         router.push({name:'tasks'})    
     }
-    console.log('after.push')
+    console.log(isLoggedIn.value)
 
 }
 
