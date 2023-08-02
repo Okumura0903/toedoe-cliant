@@ -19,8 +19,10 @@ router.beforeEach(async (to,from)=>{
             }
         };
     } else if(to.meta.guest && store.isLoggedIn){
+        console.log(store.isLoggedIn)
         return {name:"tasks"};
     }
+    console.log('not return')
 })
 
 export default router
