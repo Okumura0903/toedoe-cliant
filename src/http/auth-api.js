@@ -8,4 +8,7 @@ export const register = (user) => api.post('/auth/register',user)
 
 export const logout = () => api.post('/auth/logout')
 
-export const getUser = () => api.get('/api/user')
+export const getUser = () => api.get('/api/user',, {
+    headers: { "Content-Type": "application/json" },
+    data: {} //←これ！！！
+})
